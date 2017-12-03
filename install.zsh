@@ -2,7 +2,7 @@
 
 # Variables
 
-dir=~/.dotfiles/
+dir=~/dotfiles/
 subdir=./interface
 
 # Create symlinks in config for specified subdirectories
