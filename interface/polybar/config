@@ -1,0 +1,267 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+base00 = #263238 
+base01 = #2C393F 
+base02 = #37474F 
+base03 = #707880 
+base04 = #C9CCD3 
+base05 = #CDD3DE 
+base06 = #D5DBE5 
+base07 = #FFFFFF 
+base08 = #EC5F67
+base09 = #EA9560 
+base0A = #FFCC00 
+base0B = #8BD649 
+base0C = #80CBC4 
+base0D = #89DDFF
+base0E = #82AAFF 
+base0F = #EC5F67 
+;background = ${xrdb:color0:#222}
+background = #80263238
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #d5dbe5
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/top]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 24
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = true
+
+;font-0 = "Iosevka:style=Regular;2"
+font-0 = "Open Sans:style=Regular;2"
+font-1 = "FontAwesome:style=Regular;2"
+
+background = ${colors.background}
+foreground = ${colors.base07}
+
+line-size = 2
+line-color = ${colors.base08}
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+;font-0 = fixed:pixelsize=10;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = i3
+modules-center = music redshift date pavolume
+modules-right =  filesystem cpu memory wlan eth powermenu
+
+;tray-position = right
+;tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+; /=========================================\
+; |               MODULES HERE              |
+; \_________________________________________/
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+mount-1 = /mnt/share
+
+label-mounted = %{F#8BD649}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+workspace-label = %index%
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding = 3
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.base08}
+label-focused-underline = ${colors.base06}
+label-focused-padding = ${self.label-mode-padding}
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = ${self.label-mode-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-mode-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.base04}
+label-urgent-padding = ${self.label-mode-padding}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+;format-prefix = " "
+format-prefix = "CPU "
+format-prefix-foreground = ${colors.base0C}
+format-underline = ${colors.base0C}
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+;format-prefix = " "
+format-prefix = "RAM "
+format-prefix-foreground = ${colors.base0D}
+format-underline = ${colors.base0D}
+label = %percentage_used%%
+
+[module/wlan]
+type = internal/network
+interface = wlp6s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = "SIG 0"
+ramp-signal-1 = "SIG 1"
+ramp-signal-2 = "SIG 2"
+ramp-signal-3 = "SIG 3"
+ramp-signal-4 = "SIG 4"
+ramp-signal-foreground = ${colors.foreground}
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+
+format-connected-underline = ${colors.base0E}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.base0E}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = %A, %B %-d -
+date-alt = " %Y-%m-%d"
+
+time = %-I:%M %p
+time-alt = %H:%M:%S
+
+;format-prefix = ""
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.base0A}
+
+label = %date% %time%
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = " "
+label-open-foreground = ${colors.base0F}
+label-close = " "
+label-close-foreground = ${colors.base0F}
+label-separator = |
+label-separator-foreground = ${colors.base03}
+
+menu-0-0 = " "
+menu-0-0-exec = systemctl reboot
+menu-0-1 = " "
+menu-0-1-exec = systemctl poweroff -i
+
+[module/redshift]
+type = custom/script
+interval = 5
+
+exec = ~/.config/polybar/redshift.sh
+
+[module/pavolume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/pavolume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/pavolume.sh --up
+scroll-down = ~/.config/polybar/pavolume.sh --down
+
+[module/music]
+type = custom/script
+interval = 2
+
+label = %output:0:45:...%
+;label = %output%
+exec = ~/.config/polybar/mpris.sh
+click-left = playerctl previous
+click-middle = playerctl play-pause
+click-right = playerctl next
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
