@@ -1,2 +1,4 @@
 # dotfiles
-Configuration files for my computer
+Configuration files for my computer.
+
+This is my first setup so CHILL
