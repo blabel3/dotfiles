@@ -5,9 +5,13 @@
 dir=~/dotfiles/
 declare -a subdirs=("./interface" "./graphics")
 
+
+for file in $(find -H ./cli -maxdepth 2 -type f | sed "s|./cli||"); do
+	echo "Creating symlink in ~/ to $file ..."
+	ln -sf $dir./cli$file ~$file
+done
+
 # Create symlinks in config for specified subdirectories
-
-
 for subdir in ${subdirs[@]}; do
 
 	for file in $(find -H $subdir -maxdepth 2 -type f | sed "s|$subdir||"); do
