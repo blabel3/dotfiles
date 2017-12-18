@@ -68,7 +68,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = music redshift date pavolume
-modules-right =  filesystem cpu memory wlan eth powermenu
+modules-right =  filesystem wlan eth powermenu
 
 ;tray-position = right
 ;tray-padding = 2
@@ -170,11 +170,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = "SIG 0"
-ramp-signal-1 = "SIG 1"
-ramp-signal-2 = "SIG 2"
-ramp-signal-3 = "SIG 3"
-ramp-signal-4 = "SIG 4"
+ramp-signal-0 = ""
+ramp-signal-1 = ""
+ramp-signal-2 = ""
+ramp-signal-3 = ""
+ramp-signal-4 = ""
 ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
