@@ -67,7 +67,7 @@ module-margin-right = 2
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = mpd date pavolume
+modules-center = date pavolume mpd
 modules-right =  filesystem wlan eth powermenu
 
 ;tray-position = right
@@ -269,7 +269,7 @@ interval = 2
 ;   <icon-next>
 ;   <icon-seekb>
 ;   <icon-seekf>
-format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online = <label-song>
 
 ; Available tokens:
 ;   %artist%
@@ -277,7 +277,7 @@ format-online = <label-song> <icon-prev> <toggle> <icon-next>
 ;   %date%
 ;   %title%
 ; Default: %artist% - %title%
-label-song =   %title%
+label-song =   %artist% - %title%
 
 ; Only applies if <icon-X> is used
 icon-play = 

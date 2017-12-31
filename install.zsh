@@ -3,7 +3,7 @@
 # Variables
 
 dir=~/dotfiles/
-declare -a subdirs=("./interface" "./graphics")
+declare -a subdirs=("./interface" "./graphics" "./music")
 
 
 for file in $(find -H ./cli -maxdepth 2 -type f | sed "s|./cli||"); do
