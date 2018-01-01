@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-fill' '--no-xinerama' 'dotfiles/wallpaper.jpg' 
+'feh' '--bg-scale' '--no-xinerama' 'dotfiles/wallpaper.jpg' 
