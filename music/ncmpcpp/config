@@ -543,3 +543,6 @@ lyrics_fetchers = genius, lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics
 #
 #active_window_border = red
 #
+
+execute_on_song_change = notify-send "Now Playing:" "$(mpc current)"
+
