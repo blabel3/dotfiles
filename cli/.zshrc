@@ -59,6 +59,8 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 #Changes bundler install location to match RubyGem location
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
+export QT_QPA_PLATFORMTHEME=gtk2
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
