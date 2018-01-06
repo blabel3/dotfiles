@@ -44,9 +44,12 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 plugins=(
   git
   cdbk
+  shrink-path
 )
 
 source $ZSH/oh-my-zsh.sh
+
+
 
 # USER CONFIGURATION
 
@@ -60,6 +63,8 @@ PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 export QT_QPA_PLATFORMTHEME=gtk2
+
+export DEFAULT_USER="blabel"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -107,3 +112,6 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
+
+setopt prompt_subst
+PS1='%n@%m $(shrink_path -f)>'
