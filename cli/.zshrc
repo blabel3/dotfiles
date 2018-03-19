@@ -117,5 +117,8 @@ man() {
     command man "$@"
 }
 
+# Better ls colored output (used for shared partition)
+eval "$(dircolors ~/.dircolors)";
+
 setopt prompt_subst
 PS1='%n@%m $(shrink_path -f)>'
