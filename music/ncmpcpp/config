@@ -183,7 +183,7 @@ visualizer_color = white
 ## Note: colors can be nested.
 ##
 #
-#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+song_list_format = "                              {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
 #
 #song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
@@ -271,7 +271,7 @@ visualizer_color = white
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-execute_on_song_change = notify-send "Now Playing:" "$(mpc current)"
+execute_on_song_change = ~/.config/ncmpcpp/art-dark.sh && notify-send "Now Playing:" "$(mpc current)"
 #
 ##
 ## Note: Custom command that will be executed each time player state
@@ -292,7 +292,7 @@ execute_on_song_change = notify-send "Now Playing:" "$(mpc current)"
 ##
 ## Note: Possible display modes: classic, columns.
 ##
-#playlist_display_mode = columns
+playlist_display_mode = classic
 #
 #browser_display_mode = classic
 #
@@ -342,11 +342,11 @@ progressbar_look = "─╼─"
 #
 #default_tag_editor_pattern = %n - %t
 #
-#header_visibility = yes
+header_visibility = no
 #
-#statusbar_visibility = yes
+statusbar_visibility = yes
 #
-#titles_visibility = yes
+titles_visibility = no
 #
 #header_text_scrolling = yes
 #
@@ -455,7 +455,7 @@ lyrics_fetchers = genius, lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics
 #
 #media_library_sort_by_mtime = no
 #
-#enable_window_title = yes
+enable_window_title = no
 #
 ##
 ## Note: You can choose default search mode for search engine. Available modes
