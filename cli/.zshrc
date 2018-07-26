@@ -101,6 +101,8 @@ function powerline_precmd() {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias cclip='xclip -selection clipboard'
+
 eval $(thefuck --alias)
 
 # Start keychain for managing ssh keys.
