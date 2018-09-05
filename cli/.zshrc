@@ -18,7 +18,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-source ~/.fonts/*.sh
+#source ~/.fonts/*.sh
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -120,7 +120,8 @@ man() {
 }
 
 # Better ls colored output (used for shared partition)
-eval "$(dircolors ~/.dircolors)";
+#eval "$(dircolors ~/.dircolors)";
+# Still on computer at home
 
 setopt prompt_subst
 PS1='%n@%m $(shrink_path -f)>'
