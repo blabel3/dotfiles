@@ -21,7 +21,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 source ~/.fonts/*.sh
-POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -106,9 +106,6 @@ function powerline_precmd() {
 alias cclip='xclip -selection clipboard'
 
 eval $(thefuck --alias)
-
-# Start keychain for managing ssh keys.
-eval $(keychain --eval --quiet id_rsa ~/.ssh/id_rsa)
 
 # Colored output for man
 man() {

@@ -267,6 +267,8 @@ time-format = %H:%M
 ;   <ramp-capacity>
 ;   <animation-charging>
 format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${colors.base0C}
+label-charging-foreground = ${colors.base07}
 
 ; Available tags:
 ;   <label-discharging> (default)
@@ -274,6 +276,8 @@ format-charging = <animation-charging> <label-charging>
 ;   <ramp-capacity>
 ;   <animation-discharging>
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.base0C}
+label-discharging-foreground = ${colors.base07}
 
 ; Available tags:
 ;   <label-full> (default)
@@ -295,7 +299,7 @@ label-discharging = %percentage%%-
 
 ; Available tokens:
 ;   %percentage% (default)
-label-full = Chillin'
+label-full = 
 
 ; Only applies if <ramp-capacity> is used
 ramp-capacity-0 = 
