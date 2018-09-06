@@ -4,6 +4,12 @@
 #clickable_url = true
 #dynamic_title = true
 font = Misc Tamsyn 12
+
+#font = Pomodoro 12
+#font = FontAwesome 12
+#font = icomoon 12
+#font = octicons 12
+
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal

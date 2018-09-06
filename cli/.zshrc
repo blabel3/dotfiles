@@ -6,10 +6,12 @@
 
 # THEME CONFIGURATION
 
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -18,7 +20,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-#source ~/.fonts/*.sh
+source ~/.fonts/*.sh
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.

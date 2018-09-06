@@ -217,8 +217,8 @@ client.background $base07
 for_window [class="^.*"] border pixel 0
 for_window [class="^.*"] fullscreen disable
 
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 10
 
 exec_always --no-startup-id ~/.fehbg
 
@@ -228,3 +228,4 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec_always --no-startup-id redshift
 
+exec_always --no-startup-id udiskie
