@@ -49,7 +49,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  cdbk
+  wd
   shrink-path
 )
 
@@ -102,8 +102,6 @@ function powerline_precmd() {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias cclip='xclip -selection clipboard'
 
 eval $(thefuck --alias)
 

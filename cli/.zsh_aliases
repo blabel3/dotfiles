@@ -1,0 +1,2 @@
+alias cclip='xclip -selection clipboard'
+alias scap='flameshot gui'
