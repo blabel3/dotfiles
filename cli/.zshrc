@@ -117,8 +117,7 @@ man() {
 }
 
 # Better ls colored output (used for shared partition)
-#eval "$(dircolors ~/.dircolors)";
-# Still on computer at home
+eval "$(dircolors ~/.mydircolors)";
 
 setopt prompt_subst
 PS1='%n@%m $(shrink_path -f)>'
