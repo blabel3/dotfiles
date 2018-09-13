@@ -161,6 +161,9 @@ bindsym XF86AudioLowerVolume exec amixer set Master 1%- unmute
 bindsym XF86AudioRaiseVolume exec amixer set Master 1%+ unmute
 bindsym XF86AudioMute exec amixer set Master toggle
 
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+
 ## Base16 Materia
 # Author: Chris Kempson (http://chriskempson.com)
 #
