@@ -52,7 +52,7 @@ foreground          = #CDD3DE
 foreground_bold     = #D5DBE5
 cursor              = #D5DBE5
 cursor_foreground   = #263238
-background          = rgba(38, 50, 56)
+background          = rgba(38, 50, 56, 0.75)
 
 # 16 color space
 
