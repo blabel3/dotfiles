@@ -3,7 +3,11 @@
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = Misc Tamsyn 12
+font = SauceCodePro Nerd Font 12
+#font = Source Code Pro 11
+#font = TerminessTTF Nerd Font 12
+#font = Misc Tamsyn 12
+#font= xos4 Terminus 12
 
 #font = Pomodoro 12
 #font = FontAwesome 12

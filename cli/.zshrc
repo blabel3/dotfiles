@@ -20,7 +20,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-source ~/.fonts/*.sh
+#source ~/.fonts/*.sh
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -102,6 +102,8 @@ function powerline_precmd() {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+source $HOME/.aliases
 
 eval $(thefuck --alias)
 

@@ -46,6 +46,7 @@ fixed-center = true
 ;font-0 = "Iosevka:style=Regular;2"
 ;font-0 = "Open Sans:style=Regular;2"
 font-0 = "Misc Tamsyn:pixelsize=12:style=Regular;2"
+;font-0 = "Source Code Pro:pixelsize=12"
 font-1 = "FontAwesome:style=Regular;2"
 
 background = ${colors.background}
@@ -236,7 +237,7 @@ menu-0-1-exec = systemctl poweroff -i
 type = internal/battery
 
 ; This is useful in case the battery never reports 100% charge
-full-at = 99
+#full-at = 99
 
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
