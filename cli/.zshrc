@@ -6,7 +6,7 @@
 
 # THEME CONFIGURATION
 
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
