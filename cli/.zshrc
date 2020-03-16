@@ -9,7 +9,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir_writable dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
@@ -18,8 +18,8 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
-source ~/.fonts/*.sh
-POWERLEVEL9K_MODE='awesome-fontconfig'
+#source ~/.fonts/*.sh
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -47,7 +47,7 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  cdbk
+  wd
   shrink-path
 )
 
@@ -101,7 +101,7 @@ function powerline_precmd() {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias cclip='xclip -selection clipboard'
+source $HOME/.aliases
 
 eval $(thefuck --alias)
 
@@ -120,7 +120,7 @@ man() {
 }
 
 # Better ls colored output (used for shared partition)
-eval "$(dircolors ~/.dircolors)";
+eval "$(dircolors ~/.mydircolors)";
 
 setopt prompt_subst
 PS1='%n@%m $(shrink_path -f)>'
