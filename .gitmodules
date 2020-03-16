@@ -1,0 +1,3 @@
+[submodule "minimal-functional-fox"]
+	path = minimal-functional-fox
+	url = git@github.com:mut-ex/minimal-functional-fox.git
